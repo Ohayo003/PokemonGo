@@ -7,8 +7,7 @@ import Layout from "../../Components/Layouts/layout";
 function SSRPokemon({ data }) {
   return (
     <div style={{ height: "100%" }}>
-      <Container minW="inherit">
-        <h2 className={styles.title}>SSG POKEMON LIST</h2>
+      <Container width="inherit" pt={10}>
         <SSRPokemonList data={data} />
       </Container>
     </div>

@@ -3,7 +3,7 @@ const ListPokemons = async () => {
 
   ///Fetch the result from the endpoint
   const data = await fetch(
-    "https://pokeapi.co/api/v2/pokemon?limit=100&offset=200"
+    "https://pokeapi.co/api/v2/pokemon?limit=100&offset=300"
   );
   const jsonDataResult = await data.json();
 

@@ -58,7 +58,8 @@ function SSRPokemonId({ data }) {
             </SimpleGrid>
             <Box
               m={2}
-              borderColor="#CAEFFF"
+              //   borderColor="#CAEFFF"
+              borderColor={TypeColor(pokemon.types[0].type.name)}
               borderRadius={10}
               borderWidth="3px"
               background={TypeColor(data.types[0].type.name)}

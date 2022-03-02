@@ -59,7 +59,8 @@ function SSGPokemonId({ data }) {
             </SimpleGrid>
             <Box
               m={2}
-              borderColor="#CAEFFF"
+              // borderColor="#CAEFFF"
+              borderColor={TypeColor(pokemon.types[0].type.name)}
               borderRadius={10}
               borderWidth="3px"
               background={TypeColor(data.types[0].type.name)}
@@ -182,7 +183,7 @@ function SSGPokemonId({ data }) {
                 mt="1"
                 fontWeight="semibold"
                 as="h2"
-                background="blue"
+                background={TypeColor(data.types[0].type.name)}
                 textAlign="center"
                 color="white"
                 lineHeight="tight"
