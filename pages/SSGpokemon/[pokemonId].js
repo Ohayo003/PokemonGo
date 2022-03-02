@@ -19,11 +19,11 @@ function SSGPokemonId({ data }) {
             boxShadow={`0 4px 8px 0 ${TypeColor(
               data.types[0].type.name
             )}, 0 6px 20px 0 ${TypeColor(data.types[0].type.name)}`}
-            borderWidth="5px"
+            borderWidth="10px"
             borderRadius="lg"
             overflow="hidden"
           >
-            <SimpleGrid justifyContent="space-between" columns={2}>
+            <SimpleGrid  justifyContent="space-between" columns={2}>
               <Box
                 mt="1"
                 ml={2}
@@ -62,7 +62,7 @@ function SSGPokemonId({ data }) {
               m={2}
               borderColor="#CAEFFF"
               borderRadius={10}
-              borderWidth="3px"
+              borderWidth="3px 3px 20px 3px"
               background={TypeColor(data.types[0].type.name)}
             >
               <Image

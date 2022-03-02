@@ -26,7 +26,7 @@ function SSRPokemonList({ data }) {
           <SimpleGrid
             width="max-content"
             height="max-content"
-            columns={5}
+            columns={[1, 2, 3, 4, 5]}
             spacing="30px"
           >
             {currentData().map((pokemon) => (
@@ -60,7 +60,7 @@ function SSRPokemonList({ data }) {
                         m={1}
                         borderColor="#CAEFFF"
                         borderRadius={10}
-                        borderWidth="3px"
+                        borderWidth="2px 2px 6px 2px"
                         background={TypeColor(pokemon.types[0].type.name)}
                       >
                         <Image
@@ -71,20 +71,8 @@ function SSRPokemonList({ data }) {
                           height={50}
                         />
                       </Box>
+
                       <Box width={200} height={75}>
-                        <Box display="flex" alignItems="baseline">
-                          <Box
-                            color="white"
-                            fontWeight="semibold"
-                            letterSpacing="wide"
-                            fontSize="xs"
-                            ml={6}
-                            textTransform="uppercase"
-                          >
-                            Height {pokemon.height} &bull; Weight{" "}
-                            {pokemon.weight}
-                          </Box>
-                        </Box>
                         <Box
                           mt="1"
                           fontWeight="semibold"
@@ -96,8 +84,22 @@ function SSRPokemonList({ data }) {
                         >
                           {pokemon.name}
                         </Box>
+                        <Box display="flex" alignItems="baseline">
+                          <Box
+                            color="gray.400"
+                            fontWeight="semibold"
+                            letterSpacing="wide"
+                            fontSize="xs"
+                            ml={5}
+                            textTransform="uppercase"
+                          >
+                            Height {pokemon.height} &bull; Weight{" "}
+                            {pokemon.weight}
+                          </Box>
+                        </Box>
+
                         <Box>
-                          <Box as="span" color="gray.600" ml={5} fontSize="sm">
+                          <Box as="span" color="gray.400" ml={5} fontSize="sm">
                             Base Experience: {pokemon.base_experience}
                           </Box>
                         </Box>

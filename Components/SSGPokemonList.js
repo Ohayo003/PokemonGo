@@ -33,7 +33,7 @@ function SSGPokemonList({ data }) {
           <SimpleGrid
             width="max-content"
             height="max-content"
-            columns={5}
+            columns={[1, 2, 3, 4, 5]}
             spacing="30px"
           >
             {currentData().map((pokemon) => (
@@ -60,7 +60,7 @@ function SSGPokemonList({ data }) {
                       borderColor={TypeColor(pokemon.types[0].type.name)}
                       key={pokemon.id}
                       maxW="xl"
-                      background="#FFD631"
+                      background="#C00102"
                       borderWidth="5px"
                       borderRadius={10}
                       overflow="hidden"
@@ -70,7 +70,7 @@ function SSGPokemonList({ data }) {
                         m={1}
                         borderColor="#CAEFFF"
                         borderRadius={10}
-                        borderWidth="3px"
+                        borderWidth="2px 2px 6px 2px"
                         background={TypeColor(pokemon.types[0].type.name)}
                       >
                         <Image
@@ -82,32 +82,33 @@ function SSGPokemonList({ data }) {
                         />
                       </Box>
                       <Box width={200} height={75}>
+                        <Box
+                          mt="1"
+                          fontWeight="semibold"
+                          as="h4"
+                          ml={5}
+                          color="white"
+                          lineHeight="tight"
+                          isTruncated
+                        >
+                          {pokemon.name}
+                        </Box>
                         <Box display="flex" alignItems="baseline">
                           <Box
-                            color="white"
+                            color="gray.400"
                             fontWeight="semibold"
                             letterSpacing="wide"
                             fontSize="xs"
-                            ml={6}
+                            ml={5}
                             textTransform="uppercase"
                           >
                             Height {pokemon.height} &bull; Weight{" "}
                             {pokemon.weight}
                           </Box>
                         </Box>
-                        <Box
-                          mt="1"
-                          fontWeight="semibold"
-                          as="h4"
-                          ml={5}
-                          color="twitter.900"
-                          lineHeight="tight"
-                          isTruncated
-                        >
-                          {pokemon.name}
-                        </Box>
+
                         <Box>
-                          <Box as="span" color="gray.600" ml={5} fontSize="sm">
+                          <Box as="span" color="gray.400" ml={5} fontSize="sm">
                             Base Experience: {pokemon.base_experience}
                           </Box>
                         </Box>
@@ -124,7 +125,11 @@ function SSGPokemonList({ data }) {
             <SimpleGrid justifyItems="center" columns={3} gap={2}>
               <Box>
                 <Button
+                  border="1px"
+                  borderColor="tomato"
+                  color="tomato"
                   onClick={prevPage}
+                  _hover={{ color: "white", background: "tomato" }}
                   disabled={currentPage > 1 ? false : true}
                 >
                   Prev
@@ -146,6 +151,10 @@ function SSGPokemonList({ data }) {
               </Box>
               <Box>
                 <Button
+                  borderColor="tomato"
+                  border="1px"
+                  color="tomato"
+                  _hover={{ color: "white", background: "tomato" }}
                   onClick={nextPage}
                   disabled={currentPage < 10 ? false : true}
                 >

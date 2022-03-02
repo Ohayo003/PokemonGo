@@ -61,7 +61,7 @@ function SSRPokemonId({ data }) {
               m={2}
               borderColor="#CAEFFF"
               borderRadius={10}
-              borderWidth="3px"
+              borderWidth="3px 3px 20px 3px"
               background={TypeColor(data.types[0].type.name)}
             >
               <Image
