@@ -40,6 +40,7 @@ function SSRPokemonList({ data }) {
                     key={pokemon.id}
                     className={styles.cardClick}
                     width={200}
+                    borderRadius={10}
                     height="270px"
                     boxShadow={`0 4px 8px 0 ${TypeColor(
                       pokemon.types[0].type.name

@@ -45,6 +45,7 @@ function SSGPokemonList({ data }) {
                 >
                   <Box
                     key={pokemon.id}
+                    borderRadius={10}
                     className={styles.cardClick}
                     width={200}
                     height="270px"

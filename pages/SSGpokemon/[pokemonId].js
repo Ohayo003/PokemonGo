@@ -9,12 +9,13 @@ function SSGPokemonId({ data }) {
   console.log(data.types[0].type.name);
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <Container mt={10} pb={10} height="inherit" width="inherit" centerContent>
-        <Box className={styles.cardClick} width={420}>
+      <Container mt={10} pb={10} height="inherit" width="inherit">
+        <Box className={styles.cardClick} width="inherit">
           <Box
             className={styles.cardImage}
             background="#FFD631"
-            maxW="xl"
+            // borderColor={TypeColor(data.types[0].type.name)}
+            width="inherit"
             boxShadow={`0 4px 8px 0 ${TypeColor(
               data.types[0].type.name
             )}, 0 6px 20px 0 ${TypeColor(data.types[0].type.name)}`}
@@ -59,8 +60,7 @@ function SSGPokemonId({ data }) {
             </SimpleGrid>
             <Box
               m={2}
-              // borderColor="#CAEFFF"
-              borderColor={TypeColor(pokemon.types[0].type.name)}
+              borderColor="#CAEFFF"
               borderRadius={10}
               borderWidth="3px"
               background={TypeColor(data.types[0].type.name)}
@@ -69,8 +69,8 @@ function SSGPokemonId({ data }) {
                 src={data.sprites.other.home.front_default}
                 alt={data.name}
                 layout="responsive"
-                width={50}
-                height={50}
+                width={20}
+                height={20}
               />
             </Box>
             <Box width="inherit" height="inherit">
@@ -93,7 +93,7 @@ function SSGPokemonId({ data }) {
                 color="black"
                 fontWeight="semibold"
                 letterSpacing="wide"
-                fontSize="sm"
+                fontSize="inherit"
                 textAlign="center"
                 mt={2}
                 textTransform="uppercase"
@@ -123,7 +123,8 @@ function SSGPokemonId({ data }) {
                 color="black"
                 fontWeight="semibold"
                 letterSpacing="wide"
-                fontSize={data.abilities.length > 2 ? "12.5px" : "sm"}
+                // fontSize={data.abilities.length > 2 ? "12.5px" : "sm"}
+                fontSize="inheret"
                 textAlign="center"
                 mt={2}
                 textTransform="uppercase"
@@ -160,7 +161,7 @@ function SSGPokemonId({ data }) {
                 color="black"
                 fontWeight="semibold"
                 letterSpacing="wide"
-                fontSize="sm"
+                fontSize="inherit"
                 textAlign="center"
                 mt={2}
                 textTransform="uppercase"
@@ -195,7 +196,7 @@ function SSGPokemonId({ data }) {
                 color="black"
                 fontWeight="semibold"
                 letterSpacing="wide"
-                fontSize="sm"
+                fontSize="inherit"
                 textAlign="left"
                 mt={2}
                 textTransform="uppercase"
