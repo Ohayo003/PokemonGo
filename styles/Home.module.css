@@ -2,6 +2,15 @@
   padding: 0 2rem;
 }
 
+.cardImage {
+  border: 1px solid #ffe165;
+  box-shadow: 0 20px -5px rgba(0, 0, 0, 0.01);
+  /* 0 10px 10px -5px rgba(0, 0, 0, 0.04); */
+}
+.cardClick:hover {
+  cursor: pointer;
+}
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -43,6 +52,15 @@
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.subtitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .title,
