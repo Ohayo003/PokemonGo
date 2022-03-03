@@ -78,7 +78,7 @@ export default function Home() {
                 gap={2}
               >
                 {/*Button Section For Navigating to SSR Pokemon List */}
-                <Link passHref href="/SSRpokemon/">
+                <Link href="/SSRpokemon/" passHref>
                   <Button
                     // onClick={() => navigateToSSR()}
                     borderColor="tomato"
