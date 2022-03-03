@@ -1,13 +1,46 @@
-import { Container } from "@chakra-ui/react";
+import { Container, Spinner, Center } from "@chakra-ui/react";
 import SSGPokemonList from "/Components/SSGPokemonList";
 import Layout from "/Components/Layouts/layout";
-import { ListPokemons } from "/Components/dataFetching";
+import { LimitDataFetch } from "Components/limitedDataFetching";
+import Router from "next/router";
+import { useState } from "react";
 
 function SSGPokemon({ data }) {
+  const [loading, setLoading] = useState(false);
+
+  Router.events.on("routeChangeStart", () => {
+    setLoading(true);
+  });
+  Router.events.on("routeChangeComplete", () => {
+    setLoading(false);
+  });
+
   return (
     <div style={{ height: "100%" }}>
       <Container minW="full" pt={10}>
-        <SSGPokemonList data={data} />
+        {loading ? (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100vh",
+              width: "100%",
+            }}
+          >
+            <Center>
+              <Spinner
+                thickness="10px"
+                speed="0.65s"
+                emptyColor="white"
+                color="blue.500"
+                size="xl"
+              />
+            </Center>
+          </div>
+        ) : (
+          <SSGPokemonList data={data} />
+        )}
       </Container>
     </div>
   );
@@ -20,10 +53,9 @@ SSGPokemon.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  // const data = await ListPokemons();
   return {
     props: {
-      data: await ListPokemons(),
+      data: await LimitDataFetch(),
     },
   };
 }

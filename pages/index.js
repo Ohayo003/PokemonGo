@@ -57,9 +57,9 @@ export default function Home() {
             }}
           >
             <Spinner
-              thickness="4px"
+              thickness="10px"
               speed="0.65s"
-              emptyColor="gray.200"
+              emptyColor="white"
               color="blue.500"
               size="xl"
             />
