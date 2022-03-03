@@ -24,7 +24,7 @@ function SSRPokemonId({ data }) {
   });
 
   return (
-    <div style={{ height: "100%", width: "100%" }}>
+    <Box height="100%" width="100%">
       <Container mt={10} pb={10} height="inherit" width="inherit" centerContent>
         {loading ? (
           <div
@@ -268,7 +268,7 @@ function SSRPokemonId({ data }) {
           </Box>
         )}
       </Container>
-    </div>
+    </Box>
   );
 }
 

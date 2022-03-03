@@ -19,8 +19,7 @@ function SSGPokemonList({ data }) {
     data
   );
   return (
-    <>
-      {" "}
+    <Box position="relative" height="100%" width="100%">
       <Container
         borderRadius={10}
         height="100%"
@@ -165,7 +164,7 @@ function SSGPokemonList({ data }) {
           </Box>
         </>
       </Container>
-    </>
+    </Box>
   );
 }
 

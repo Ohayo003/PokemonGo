@@ -1,4 +1,4 @@
-import { Container, Spinner, Center } from "@chakra-ui/react";
+import { Container, Spinner, Center, Box } from "@chakra-ui/react";
 import SSGPokemonList from "/Components/SSGPokemonList";
 import Layout from "/Components/Layouts/layout";
 import { LimitDataFetch } from "Components/limitedDataFetching";
@@ -16,7 +16,7 @@ function SSGPokemon({ data }) {
   });
 
   return (
-    <div style={{ height: "100%" }}>
+    <Box height="100%" position="relative">
       <Container minW="full" pt={10}>
         {loading ? (
           <div
@@ -42,7 +42,7 @@ function SSGPokemon({ data }) {
           <SSGPokemonList data={data} />
         )}
       </Container>
-    </div>
+    </Box>
   );
 }
 

@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <Box width="100%" position="relative" zIndex="0">
       <Box width="100%" height="100%" position="absolute" zIndex="-1">
-        <Image src={pokeballbg} alt="background" layout="fill" />
+        <Image src={pokeballbg} alt="background" layout="fill" objectFit="cover" />
       </Box>
       <Header />
       {children}

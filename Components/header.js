@@ -7,7 +7,7 @@ function Header() {
   return (
     <>
       <Container centerContent width="100%">
-        <Image src={headerImage} alt="header image" width={400} height={200} />
+        <Image src={headerImage} alt="header image" width={500} height={200} />
       </Container>
     </>
   );

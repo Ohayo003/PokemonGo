@@ -1,4 +1,4 @@
-import { Container, Center, Spinner } from "@chakra-ui/react";
+import { Container, Center, Spinner, Box } from "@chakra-ui/react";
 import SSRPokemonList from "/Components/SSRPokemonList";
 import Layout from "/Components/Layouts/layout";
 import { LimitDataFetch } from "Components/limitedDataFetching";
@@ -24,7 +24,7 @@ function SSRPokemon({ data }) {
   });
 
   return (
-    <div style={{ height: "100%" }}>
+    <Box height="100%">
       <Container width="inherit" pt={10}>
         {loading ? (
           <div
@@ -50,7 +50,7 @@ function SSRPokemon({ data }) {
           <SSRPokemonList data={data} />
         )}
       </Container>
-    </div>
+    </Box>
   );
 }
 

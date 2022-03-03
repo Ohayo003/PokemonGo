@@ -27,7 +27,7 @@ function SSGPokemonId({ data }) {
   const pokemonName = data.name.charAt(0).toUpperCase() + data.name.slice(1);
 
   return (
-    <div style={{ height: "100%", width: "100%" }}>
+    <Box height="100%" width="100%">
       {loading ? (
         <div
           style={{
@@ -274,7 +274,7 @@ function SSGPokemonId({ data }) {
           </Box>
         </Container>
       )}
-    </div>
+    </Box>
   );
 }
 

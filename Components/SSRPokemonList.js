@@ -13,8 +13,7 @@ function SSRPokemonList({ data }) {
   );
 
   return (
-    <>
-      {" "}
+    <Box>
       <Container
         centerContent
         height="100%"
@@ -149,7 +148,7 @@ function SSRPokemonList({ data }) {
           </Box>
         </>
       </Container>
-    </>
+    </Box>
   );
 }
 
