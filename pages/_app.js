@@ -1,7 +1,5 @@
 import { ChakraProvider, Spinner } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
-import Header from "/Components/header";
-import Layout from "/Components/Layouts/layout";
 import "/styles/globals.css";
 
 const color = {

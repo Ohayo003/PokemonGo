@@ -19,8 +19,15 @@ export async function getServerSideProps() {
     for (const element of results) {
       const data2 = await fetch(`${element.url}`);
       const jsonData = await data2.json();
-      pokemonData.push(jsonData);
-      console.log(element.url);
+      pokemonData.push({
+        name: jsonData.name,
+        image: jsonData.sprites.other.home.front_default,
+        weight: jsonData.weight,
+        height: jsonData.height,
+        base_experience: jsonData.base_experience,
+        types: jsonData.types,
+        id: jsonData.id,
+      });
     }
   }
   return {

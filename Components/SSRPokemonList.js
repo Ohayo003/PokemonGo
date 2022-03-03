@@ -65,7 +65,7 @@ function SSRPokemonList({ data }) {
                         background={TypeColor(pokemon.types[0].type.name)}
                       >
                         <Image
-                          src={pokemon.sprites.other.home.front_default}
+                          src={pokemon.image}
                           alt={pokemon.name}
                           layout="responsive"
                           width={50}
