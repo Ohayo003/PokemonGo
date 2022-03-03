@@ -1,6 +1,5 @@
 import { Container } from "@chakra-ui/react";
 import SSGPokemonList from "../../Components/SSGPokemonList";
-import styles from "../../styles/Home.module.css";
 import Layout from "../../Components/Layouts/layout";
 import ListPokemons from "../../Components/dataFetching";
 
@@ -21,10 +20,10 @@ SSGPokemon.getLayout = function getLayout(page) {
 };
 
 export async function getStaticProps() {
-  const data = await ListPokemons();
+  // const data = await ListPokemons();
   return {
     props: {
-      data,
+      data: await ListPokemons(),
     },
   };
 }
