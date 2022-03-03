@@ -5,12 +5,12 @@ import SSRPokemonList from "../../Components/SSRPokemonList";
 import Layout from "../../Components/Layouts/layout";
 import { useRouter } from "next/router";
 function SSRPokemon({ data }) {
-  const router = useRouter();
-  const {
-    query: { loading },
-  } = router;
-  // const loading = router.query({ loading });
-  console.log(loading);
+  // const router = useRouter();
+  // const {
+  //   query: { loading },
+  // } = router;
+  // // const loading = router.query({ loading });
+  // console.log(loading);
   return (
     <div style={{ height: "100%" }}>
       <Container width="inherit" pt={10}>
