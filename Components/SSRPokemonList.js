@@ -1,9 +1,9 @@
-import styles from "../styles/Home.module.css";
+import styles from "/styles/Home.module.css";
 import { Box, Button, Container, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import usePagination from "./pagination";
-import { TypeColor } from "./colorTypes";
+import usePagination from "/Components/pagination";
+import { TypeColor } from "/Components/colorTypes";
 
 function SSRPokemonList({ data }) {
   const itemsPerPage = 10;

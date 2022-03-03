@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles/Home.module.css";
+import styles from "/styles/Home.module.css";
 import {
   Box,
   Button,
@@ -9,8 +9,8 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
-import usePagination from "./pagination";
-import { TypeColor } from "./colorTypes";
+import usePagination from "/Components/pagination";
+import { TypeColor } from "/Components/colorTypes";
 
 function SSGPokemonList({ data }) {
   const itemsPerPage = 10;

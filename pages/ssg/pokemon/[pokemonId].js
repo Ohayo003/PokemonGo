@@ -1,10 +1,10 @@
 import { Container, SimpleGrid, Flex, Box, Center } from "@chakra-ui/react";
 import Image from "next/image";
-import { TypeColor } from "../../../Components/colorTypes";
-import { ListPokemons } from "../../../Components/dataFetching";
-import Layout from "../../../Components/Layouts/layout";
+import { TypeColor } from "/Components/colorTypes";
+import { ListPokemons } from "/Components/dataFetching";
+import Layout from "/Components/Layouts/layout";
 import { useState } from "react";
-import styles from "../../styles/Home.module.css";
+import styles from "/styles/Home.module.css";
 
 function SSGPokemonId({ data }) {
   // console.log(data.types[0].type.name);

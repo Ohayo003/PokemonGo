@@ -1,8 +1,8 @@
 import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import Image from "next/image";
-import { TypeColor } from "../../../Components/colorTypes";
-import Layout from "../../../Components/Layouts/layout";
-import styles from "../../styles/Home.module.css";
+import { TypeColor } from "/Components/colorTypes";
+import Layout from "/Components/Layouts/layout";
+import styles from "/styles/Home.module.css";
 
 function SSRPokemonId({ data }) {
   console.log(data.types[0].type.name);

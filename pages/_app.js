@@ -1,8 +1,8 @@
 import { ChakraProvider, Spinner } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
-import Header from "../Components/header";
-import Layout from "../Components/Layouts/layout";
-import "../styles/globals.css";
+import Header from "/Components/header";
+import Layout from "/Components/Layouts/layout";
+import "/styles/globals.css";
 
 const color = {
   brand: {
@@ -15,8 +15,6 @@ const color = {
 const theme = extendTheme({ color });
 
 function MyApp({ Component, pageProps }) {
-
-
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(

@@ -1,7 +1,7 @@
 import { Button, Box, SimpleGrid, Spinner } from "@chakra-ui/react";
 import Head from "next/head";
-import pokemonGo from "../public/pngegg.png";
-import Layout from "../Components/Layouts/layout";
+import pokemonGo from "/public/pngegg.png";
+import Layout from "/Components/Layouts/layout";
 import Link from "next/link";
 import Image from "next/image";
 import Router, { useRouter } from "next/router";

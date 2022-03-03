@@ -1,7 +1,7 @@
 import { Container, List, Spinner } from "@chakra-ui/react";
-import { ListPokemons } from "../../Components/dataFetching";
-import SSRPokemonList from "../../Components/SSRPokemonList";
-import Layout from "../../Components/Layouts/layout";
+import { ListPokemons } from "/Components/dataFetching";
+import SSRPokemonList from "/Components/SSRPokemonList";
+import Layout from "/Components/Layouts/layout";
 
 export async function getServerSideProps() {
   const pokemonData = [];
