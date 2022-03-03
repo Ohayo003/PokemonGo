@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import { Box, Button, Container, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
@@ -12,6 +11,7 @@ function SSRPokemonList({ data }) {
     itemsPerPage,
     data
   );
+
   return (
     <>
       {" "}
@@ -51,7 +51,8 @@ function SSRPokemonList({ data }) {
                       borderColor={TypeColor(pokemon.types[0].type.name)}
                       key={pokemon.id}
                       maxW="xl"
-                      background="#FFD631"
+                      // background="#FFD631"
+                      background="#C00102"
                       borderWidth="5px"
                       borderRadius={10}
                       overflow="hidden"
@@ -78,7 +79,7 @@ function SSRPokemonList({ data }) {
                           fontWeight="semibold"
                           as="h4"
                           ml={5}
-                          color="twitter.900"
+                          color="white"
                           lineHeight="tight"
                           isTruncated
                         >

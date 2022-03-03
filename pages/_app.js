@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, Spinner } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
 import Header from "../Components/header";
 import Layout from "../Components/Layouts/layout";
@@ -15,11 +15,13 @@ const color = {
 const theme = extendTheme({ color });
 
 function MyApp({ Component, pageProps }) {
+
+
   const getLayout = Component.getLayout || ((page) => page);
 
   return getLayout(
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <Component {...pageProps} />)
     </ChakraProvider>
   );
 }
