@@ -59,7 +59,7 @@ function SSGPokemonList({ data }) {
                       borderColor={TypeColor(pokemon.types[0].type.name)}
                       key={pokemon.id}
                       maxW="xl"
-                      background="#C00102"
+                      background="#dc2626"
                       borderWidth="5px"
                       borderRadius={10}
                       overflow="hidden"

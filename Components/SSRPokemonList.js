@@ -51,7 +51,8 @@ function SSRPokemonList({ data }) {
                       key={pokemon.id}
                       maxW="xl"
                       // background="#FFD631"
-                      background="#C00102"
+                      // background="#C00102"
+                      background="#dc2626"
                       borderWidth="5px"
                       borderRadius={10}
                       overflow="hidden"
