@@ -88,7 +88,8 @@ function SSRPokemonId({ data }) {
                       fontSize={30}
                       ml={2}
                       letterSpacing="wide"
-                      color={TypeColor(data.types[0].type.name)}
+                      // color={TypeColor(data.types[0].type.name)}
+                      color="skyblue"
                       fontWeight="bold"
                     >
                       <h3>{pokemonName}</h3>
@@ -115,7 +116,7 @@ function SSRPokemonId({ data }) {
                       letterSpacing="wide"
                       borderRadius={10}
                       p={1}
-                      width={10}
+                      width={12}
                       color={TypeColor(data.types[0].type.name)}
                       lineHeight="tight"
                     >

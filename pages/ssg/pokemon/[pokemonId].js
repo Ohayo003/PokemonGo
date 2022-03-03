@@ -91,7 +91,8 @@ function SSGPokemonId({ data }) {
                       fontSize={30}
                       ml={2}
                       letterSpacing="wide"
-                      color={TypeColor(data.types[0].type.name)}
+                      // color={TypeColor(data.types[0].type.name)}
+                      color="darkcyan"
                       fontWeight="bold"
                     >
                       <h3>{pokemonName}</h3>
@@ -160,11 +161,13 @@ function SSGPokemonId({ data }) {
                       as="h2"
                       fontSize="xl"
                       textAlign="center"
-                      borderRadius="0px 10px 10px 0px"
+                      borderRadius="10px 10px 10px 0px"
                       color="white"
                       lineHeight="tight"
+                      
                       mr={5}
-                      background={TypeColor(data.types[0].type.name)}
+                      // background={TypeColor(data.types[0].type.name)}
+                      background="darkcyan"
                       isTruncated
                     >
                       <h4>Basic Information</h4>
@@ -194,11 +197,12 @@ function SSGPokemonId({ data }) {
                       fontWeight="bold"
                       as="h2"
                       textAlign="center"
-                      borderRadius="10px 0px 0px 10px"
+                      borderRadius="10px 0px 10px 10px"
                       color="white"
                       fontSize="xl"
                       ml={5}
-                      background={TypeColor(data.types[0].type.name)}
+                      // background={TypeColor(data.types[0].type.name)}
+                      background="darkcyan"
                       lineHeight="tight"
                       isTruncated
                     >
@@ -233,7 +237,8 @@ function SSGPokemonId({ data }) {
                     mt="1"
                     fontWeight="semibold"
                     as="h2"
-                    background={TypeColor(data.types[0].type.name)}
+                    // background={TypeColor(data.types[0].type.name)}
+                    background="darkcyan"
                     textAlign="center"
                     color="white"
                     borderRadius="0px 10px"
