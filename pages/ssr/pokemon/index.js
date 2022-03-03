@@ -17,7 +17,7 @@ export async function getServerSideProps() {
   ///get the url's and then fetch every single data from the url
   if (results) {
     for (const element of results) {
-      const data2 = await fetch(`${element.url}`);
+      const data2 = await fetch(element.url);
       const jsonData = await data2.json();
       pokemonData.push(jsonData);
     }
