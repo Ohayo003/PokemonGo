@@ -47,7 +47,8 @@ function SSRPokemonList({ data }) {
                   >
                     <Box
                       // className={styles.cardImage}
-                      borderColor={TypeColor(pokemon.types[0].type.name)}
+                      // borderColor={TypeColor(pokemon.types[0].type.name)}
+                      borderColor="#ef4444"
                       key={pokemon.id}
                       maxW="xl"
                       // background="#FFD631"
