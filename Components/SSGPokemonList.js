@@ -40,7 +40,7 @@ function SSGPokemonList({ data }) {
               <>
                 <Link
                   passHref
-                  href={`/SSGpokemon/${pokemon.id}`}
+                  href={`/ssg/pokemon/${pokemon.id}`}
                   key={pokemon.id}
                 >
                   <Box
@@ -74,7 +74,7 @@ function SSGPokemonList({ data }) {
                         background={TypeColor(pokemon.types[0].type.name)}
                       >
                         <Image
-                          src={pokemon.sprites.other.home.front_default}
+                          src={pokemon.image}
                           alt={pokemon.name}
                           layout="responsive"
                           width={50}

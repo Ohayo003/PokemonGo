@@ -33,7 +33,7 @@ function SSRPokemonList({ data }) {
               <>
                 <Link
                   passHref
-                  href={`/SSRpokemon/${pokemon.id}`}
+                  href={`/ssr/pokemon/${pokemon.id}`}
                   key={pokemon.id}
                 >
                   <Box
