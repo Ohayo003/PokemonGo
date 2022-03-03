@@ -159,7 +159,7 @@ function SSGPokemonId({ data }) {
                       mt="1"
                       fontWeight="bold"
                       as="h2"
-                      fontSize="xl"
+                      fontSize="lg"
                       textAlign="center"
                       borderRadius="10px 10px 10px 0px"
                       color="white"
@@ -175,7 +175,7 @@ function SSGPokemonId({ data }) {
                       color="black"
                       fontWeight="semibold"
                       letterSpacing="wide"
-                      fontSize="inherit"
+                      fontSize="sm"
                       textAlign="center"
                       mt={2}
                       textTransform="uppercase"
@@ -198,7 +198,7 @@ function SSGPokemonId({ data }) {
                       textAlign="center"
                       borderRadius="10px 0px 10px 10px"
                       color="white"
-                      fontSize="xl"
+                      fontSize="lg"
                       ml={5}
                       // background={TypeColor(data.types[0].type.name)}
                       background="darkcyan"

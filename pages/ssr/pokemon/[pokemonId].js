@@ -156,9 +156,9 @@ function SSRPokemonId({ data }) {
                       mt="1"
                       fontWeight="bold"
                       as="h2"
-                      fontSize="xl"
+                      fontSize="lg"
                       textAlign="center"
-                      borderRadius="0px 10px 10px 0px"
+                      borderRadius="10px 10px 10px 0px"
                       color="white"
                       lineHeight="tight"
                       mr={5}
@@ -171,7 +171,7 @@ function SSRPokemonId({ data }) {
                       color="black"
                       fontWeight="semibold"
                       letterSpacing="wide"
-                      fontSize="inherit"
+                      fontSize="md"
                       textAlign="center"
                       mt={2}
                       textTransform="uppercase"
@@ -192,9 +192,9 @@ function SSRPokemonId({ data }) {
                       fontWeight="bold"
                       as="h2"
                       textAlign="center"
-                      borderRadius="10px 0px 0px 10px"
+                      borderRadius="10px 0px 10px 10px"
                       color="white"
-                      fontSize="xl"
+                      fontSize="lg"
                       ml={5}
                       background={TypeColor(data.types[0].type.name)}
                       lineHeight="tight"
