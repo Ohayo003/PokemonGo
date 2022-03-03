@@ -1,4 +1,4 @@
-const ListPokemons = async () => {
+export const ListPokemons = async () => {
   const pokemonData = [];
 
   ///Fetch the result from the endpoint
@@ -11,7 +11,7 @@ const ListPokemons = async () => {
   ///get the url's and then fetch every single data from the url
   if (jsonDataResult) {
     for (const element of jsonDataResult.results) {
-      const data = await fetch(element.url);
+      const data = await fetch(`${element.url}`);
       const jsonData = await data.json();
       pokemonData.push(jsonData);
     }
@@ -19,4 +19,3 @@ const ListPokemons = async () => {
 
   return pokemonData;
 };
-export default ListPokemons;

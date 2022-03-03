@@ -1,7 +1,7 @@
 import { Container } from "@chakra-ui/react";
 import SSGPokemonList from "../../Components/SSGPokemonList";
 import Layout from "../../Components/Layouts/layout";
-import ListPokemons from "../../Components/dataFetching";
+import { ListPokemons } from "../../Components/dataFetching";
 
 function SSGPokemon({ data }) {
   return (
