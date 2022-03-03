@@ -37,13 +37,13 @@ export async function getServerSideProps() {
 
   ///Check if the jsonDataResult has data and loop through all the result to
   ///get the url's and then fetch every single data from the url
-  if (results) {
+  // if (results) {
     for (const element of results) {
       const data = await fetch(`${element.url}`);
       const jsonData = await data.json();
       pokemonData.push(jsonData);
     }
-  }
+  // }
   return {
     props: {
       data: pokemonData,
