@@ -32,12 +32,13 @@ export async function getServerSideProps() {
   const data = await fetch(
     "https://pokeapi.co/api/v2/pokemon?limit=100&offset=300"
   );
-  const jsonDataResult = await data.json();
+  // const jsonDataResult = await data.json();
+  const { results } = await data.json();
 
   ///Check if the jsonDataResult has data and loop through all the result to
   ///get the url's and then fetch every single data from the url
-  if (jsonDataResult) {
-    for (const element of jsonDataResult.results) {
+  if (results) {
+    for (const element of results) {
       const data = await fetch(`${element.url}`);
       const jsonData = await data.json();
       pokemonData.push(jsonData);
