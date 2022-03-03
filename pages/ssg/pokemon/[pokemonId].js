@@ -118,7 +118,7 @@ function SSGPokemonId({ data }) {
                       letterSpacing="wide"
                       borderRadius={10}
                       p={1}
-                      width={10}
+                      width={12}
                       color={TypeColor(data.types[0].type.name)}
                       lineHeight="tight"
                     >
