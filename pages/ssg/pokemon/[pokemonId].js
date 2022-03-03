@@ -80,7 +80,7 @@ function SSGPokemonId({ data }) {
                         borderRadius={10}
                         height={7}
                         width={50}
-                        color={TypeColor(data.types[0].type.name)}
+                        color="darkcyan"
                         lineHeight="tight"
                       >
                         <h2>Basic</h2>
@@ -120,7 +120,7 @@ function SSGPokemonId({ data }) {
                       borderRadius={10}
                       p={1}
                       width={12}
-                      color={TypeColor(data.types[0].type.name)}
+                      color="darkcyan"
                       lineHeight="tight"
                     >
                       <h6>
@@ -164,7 +164,6 @@ function SSGPokemonId({ data }) {
                       borderRadius="10px 10px 10px 0px"
                       color="white"
                       lineHeight="tight"
-                      
                       mr={5}
                       // background={TypeColor(data.types[0].type.name)}
                       background="darkcyan"
