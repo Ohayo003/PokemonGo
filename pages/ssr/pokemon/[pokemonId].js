@@ -1,21 +1,14 @@
-import { Container, SimpleGrid, Flex, Box, Center } from "@chakra-ui/react";
+import { Container, SimpleGrid, Box } from "@chakra-ui/react";
 import Image from "next/image";
-import { TypeColor } from "../../Components/colorTypes";
-import { ListPokemons } from "../../Components/dataFetching";
-import Layout from "../../Components/Layouts/layout";
-import { useState } from "react";
+import { TypeColor } from "../../../Components/colorTypes";
+import Layout from "../../../Components/Layouts/layout";
 import styles from "../../styles/Home.module.css";
 
-function SSGPokemonId({ data }) {
-  // console.log(data.types[0].type.name);
-  const [hp, setHp] = useState("");
-  const [hpVal, setHpVal] = useState(0);
-
-  const pokemonName = data.name.charAt(0).toUpperCase() + data.name.slice(1);
-
+function SSRPokemonId({ data }) {
+  console.log(data.types[0].type.name);
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <Container mt={10} pb={10} height="inherit" width="inherit">
+      <Container mt={10} pb={10} height="inherit" width="inherit" centerContent>
         <Box className={styles.cardClick} width="inherit">
           <Box
             className={styles.cardImage}
@@ -27,78 +20,43 @@ function SSGPokemonId({ data }) {
             )}, 0 6px 20px 0 ${TypeColor(data.types[0].type.name)}`}
             borderWidth="10px"
             borderRadius="lg"
-            // overflow="hidden"
+            overflow="hidden"
           >
-            <Box>
-              <SimpleGrid justifyContent="space-between" columns={2}>
-                <Flex>
-                  <Center>
-                    <Box
-                      // overflow="hidden"
-                      mt="1"
-                      ml={-1}
-                      fontWeight="semibold"
-                      border="2px"
-                      background="white"
-                      fontStyle="italic"
-                      fontFamily="sans-serif"
-                      textAlign="center"
-                      borderRadius={10}
-                      height={7}
-                      width={50}
-                      color={TypeColor(data.types[0].type.name)}
-                      lineHeight="tight"
-                    >
-                      <h2>Basic</h2>
-                    </Box>
-                  </Center>
-                  <Box
-                    fontStyle="italic"
-                    fontSize={30}
-                    ml={2}
-                    letterSpacing="wide"
-                    color={TypeColor(data.types[0].type.name)}
-                    fontWeight="bold"
-                  >
-                    <h3>{pokemonName}</h3>
-                  </Box>
-                </Flex>
-                <Flex align="end" justify="right">
-                  <Box
-                    alignContent="baseline"
-                    fontSize="md"
-                    fontWeight="bold"
-                    mr={2}
-                  >
-                    <h4>HP</h4>
-                  </Box>
-                  <Box
-                    mt="1"
-                    mr={2}
-                    fontWeight="bold"
-                    border="2px"
-                    justifySelf="right"
-                    background="white"
-                    textAlign="center"
-                    fontSize="xl"
-                    letterSpacing="wide"
-                    borderRadius={10}
-                    p={1}
-                    width={10}
-                    color={TypeColor(data.types[0].type.name)}
-                    lineHeight="tight"
-                  >
-                    <h6>
-                      {data.stats.map((s) => {
-                        if (s.stat.name === "hp") {
-                          return s.base_stat;
-                        }
-                      })}
-                    </h6>
-                  </Box>
-                </Flex>
-              </SimpleGrid>
-            </Box>
+            <SimpleGrid justifyContent="space-between" columns={2}>
+              <Box
+                mt="1"
+                ml={2}
+                fontWeight="semibold"
+                as="h2"
+                border="1px"
+                background="white"
+                textAlign="center"
+                borderRadius={10}
+                p={1}
+                width={100}
+                color={TypeColor(data.types[0].type.name)}
+                lineHeight="tight"
+              >
+                <h3 className={styles.subtitle}>{data.name}</h3>
+              </Box>
+              <Box
+                mt="1"
+                mr={2}
+                fontWeight="semibold"
+                as="h2"
+                border="1px"
+                justifySelf="right"
+                background="white"
+                textAlign="center"
+                borderRadius={10}
+                p={1}
+                width={120}
+                color={TypeColor(data.types[0].type.name)}
+                lineHeight="tight"
+              >
+                <h6 className={styles.subtitle}>{data.types[0].type.name}</h6>
+              </Box>
+            </SimpleGrid>
             <Box
               m={2}
               borderColor="#CAEFFF"
@@ -165,7 +123,7 @@ function SSGPokemonId({ data }) {
                 fontWeight="semibold"
                 letterSpacing="wide"
                 // fontSize={data.abilities.length > 2 ? "12.5px" : "sm"}
-                fontSize="inheret"
+                fontSize="inherit"
                 textAlign="center"
                 mt={2}
                 textTransform="uppercase"
@@ -260,30 +218,13 @@ function SSGPokemonId({ data }) {
   );
 }
 
-export default SSGPokemonId;
+export default SSRPokemonId;
 
-SSGPokemonId.getLayout = function getLayout(page) {
+SSRPokemonId.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;
 };
 
-export async function getStaticPaths() {
-  const pokemonListData = await ListPokemons();
-
-  const paths = pokemonListData.map((pokemon) => {
-    return {
-      params: {
-        pokemonId: `${pokemon.id}`,
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: "blocking",
-  };
-}
-
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { params } = context;
   const response = await fetch(
     `https://pokeapi.co/api/v2/pokemon/${params.pokemonId}`
